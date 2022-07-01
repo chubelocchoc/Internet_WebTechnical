@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/formlogin-1.css">
+    
+    <!-- Funtion -->
+    <script language="javascript" type="text/javascript" src="./script/virrusFuntion.js">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    </script>
+  </head>
+
+  <!-- body -->
+  <body style="background-image:url('./images/pattern.png'); background-repeat: repeat;">
+    
+    <!-- trang đang nhập -->
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="text-info text-center">
+            <img src="./images/virus.jpg" width="100" height="100" class="" alt="">
+            Virus Scanner
+          </h1>
+        </div>
+      </div>
+
+      <!-- form dang nhap -->
+      <br><br><br>
+      <form id="dnForm" action="" method="post" onsubmit="return DangNhap();" novalidate>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <label for="user">Username</label>
+            <input type="text" size="20" class="form-control" id="username" placeholder="Enter user" name="username" required>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <label for="pass">Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" id="password" name="password" AUTOCOMPLETE="off" required>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-4">
+            <br>
+            <span class="p-2"><input type="submit" value="Login" name="Login"></span>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+          <div class="col-sm-5">
+            <br>
+            <span class="font-weight-bolder p-1 bg-muted"><a href="./SignUp.html">Sign Up!</a></span>
+            
+            <span class="text-center">Or <a onclick="document.getElementById('id01').style.display='block' " href="#" class="text-danger">Forgot password?</a></span>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+
+    <!-- quên mật khẩu -->
+    <div id="id01" class="modal">
+
+      <!-- popup -->
+      <form class="modal-content animate" action="index.html" method="Post" onsubmit="return ThongBao();">
+
+          <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+              <label for="psw"><b>Email</b></label>
+              <input class="psw" type="text" placeholder="Enter your email" name="email" id="email" required>
+              
+
+              <button class="font-weight-bold bg-info text-dark" type="submit">Send to my email</button>
+          </div>
+      </form>
+    </div>
+
+    
+    <!-- hien thi man hinh -->
+    <script>
+      var manhinh = document.getElementById('id01');      
+      window.onclick = function(event) {
+        if (event.target == manhinh) {
+          manhinh.style.display = "none";
+        }
+      }
+    </script>
+
+
+  </body>
+</html>
